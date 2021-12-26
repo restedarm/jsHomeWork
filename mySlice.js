@@ -18,7 +18,7 @@ Array.prototype.mySlice = function(start,end){
 
     if ( start >= end ) {
         console.log("empty slice ");
-        return;
+        return [];
     }
     for (let i = start; i < end; i ++){
             newArr.push(this[i]);   
