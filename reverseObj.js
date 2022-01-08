@@ -10,7 +10,8 @@ const obj = {
 function reverseObj(obj){
     let ret = {};  
     for(let key in obj){
-        if ( typeof(obj[key]) === "object"){    
+      let type = Object.prototype.toString.call(obj[key]);
+      if ( type.includes("Object")){    
             newObj = reverseObj(obj[key]);
             ret[key] = newObj;     
         }
